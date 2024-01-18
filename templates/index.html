@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .box {
+            flex: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea class="box" id="source"></textarea>
+        <textarea class="box" id="output"></textarea>
+    </div>
+    <select id="convertFrom">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+    <select id="convertTo">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+    <button onclick="convert()">Go</button>
+
+    <script>
+        function convert() {
+            var source = document.getElementById('source').value;
+            var convertFrom = document.getElementById('convertFrom').value;
+            var convertTo = document.getElementById('convertTo').value;
+
+            // Add your conversion logic here
+
+            document.getElementById('output').value = source; // Replace 'source' with your converted value
+        }
+    </script>
+</body>
+</html>
